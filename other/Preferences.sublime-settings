@@ -1,0 +1,53 @@
+{
+	"atomic_save": false,
+	"auto_complete_commit_on_tab": true,
+	"auto_match_enabled": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Postap/Postap.tmTheme",
+	"drag_text": false,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
+	"findreplace_small": false,
+	"font_face": "Hack",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"scroll_speed": 1.0,
+	"tabs_medium": true,
+	"theme": "postap.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"typescript_auto_format": false,
+	"vintage_start_in_command_mode": true
+}
