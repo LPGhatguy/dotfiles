@@ -5,7 +5,7 @@ DEFAULT_USER="lucien"
 DISABLE_AUTO_TITLE="true"
 PR_TITLEBAR=""
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.npm-global/bin
 
