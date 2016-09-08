@@ -7,10 +7,12 @@ PR_TITLEBAR=""
 
 plugins=(zsh-syntax-highlighting)
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/.npm-global/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export RUST_SRC_PATH=~/rust/src
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
+source ~/.profile
 
 set-window-title() {
 	if [ -z "$1" ]; then
