@@ -22,7 +22,8 @@
 		".DS_Store",
 		"*.class",
 		"*.db",
-		"*.sublime-workspace"
+		"*.sublime-workspace",
+		"*.sublime-project"
 	],
 	"folder_exclude_patterns":
 	[
