@@ -44,6 +44,7 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"rulers": [80, 120],
 	"scroll_speed": 1.0,
 	"tabs_medium": true,
 	"theme": "postap.sublime-theme",
