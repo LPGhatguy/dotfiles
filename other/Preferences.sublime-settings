@@ -35,7 +35,7 @@
 	],
 	"findreplace_small": false,
 	"font_face": "Hack",
-	"font_size": 12,
+	"font_size": 11,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -45,6 +45,9 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"margin": 0,
 	"rulers": [80, 120],
 	"scroll_speed": 1.0,
 	"tabs_medium": true,
