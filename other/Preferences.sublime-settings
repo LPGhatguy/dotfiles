@@ -3,7 +3,7 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_match_enabled": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Postap/Postap.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Postap (SL).tmTheme",
 	"drag_text": false,
 	"file_exclude_patterns":
 	[
@@ -25,6 +25,7 @@
 		"*.sublime-workspace",
 		"*.sublime-project"
 	],
+	"findreplace_small": false,
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -33,9 +34,8 @@
 		"CVS",
 		"node_modules"
 	],
-	"findreplace_small": false,
 	"font_face": "Hack",
-	"font_size": 11,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -45,14 +45,18 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"line_padding_top": 1,
 	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"margin": 0,
-	"rulers": [80, 120],
+	"rulers":
+	[
+		80,
+		120
+	],
 	"scroll_speed": 1.0,
 	"tabs_medium": true,
 	"theme": "postap.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"typescript_auto_format": false,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": false
 }
