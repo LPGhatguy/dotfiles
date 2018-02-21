@@ -1,6 +1,6 @@
 [
-	{ "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
-	{ "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
+	{ "keys": ["ctrl+pagedown"], "command": "unbound" },
+	{ "keys": ["ctrl+pageup"], "command": "unbound" },
 
 	{ "keys": ["ctrl+tab"], "command": "next_view" },
 	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
@@ -16,5 +16,14 @@
 	{ "keys": ["ctrl+7"], "command": "select_by_index", "args": { "index": 6 } },
 	{ "keys": ["ctrl+8"], "command": "select_by_index", "args": { "index": 7 } },
 	{ "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
-	{ "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } }
+
+	{ "keys": ["ctrl+alt+1"], "command": "focus_group", "args": { "group": 0 } },
+	{ "keys": ["ctrl+alt+2"], "command": "focus_group", "args": { "group": 1 } },
+	{ "keys": ["ctrl+alt+3"], "command": "focus_group", "args": { "group": 2 } },
+	{ "keys": ["ctrl+alt+4"], "command": "focus_group", "args": { "group": 3 } },
+	{ "keys": ["ctrl+alt+5"], "command": "focus_group", "args": { "group": 4 } },
+	{ "keys": ["ctrl+alt+6"], "command": "focus_group", "args": { "group": 5 } },
+	{ "keys": ["ctrl+alt+7"], "command": "focus_group", "args": { "group": 6 } },
+	{ "keys": ["ctrl+alt+8"], "command": "focus_group", "args": { "group": 7 } },
+	{ "keys": ["ctrl+alt+9"], "command": "focus_group", "args": { "group": 8 } }
 ]
