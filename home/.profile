@@ -1,5 +1,11 @@
-alias proj="cd /c/projects"
+# Load machine-specific settings
+source ~/.machine_profile
 
-# Unicode codepage!
-C:/Windows/System32/chcp.com 65001
+# Standard stuff
+proj() {
+	cd ~/projects
+}
+export -f proj
+
+/c/Windows/System32/chcp.com 65001
 clear

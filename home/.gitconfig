@@ -1,0 +1,10 @@
+[core]
+	excludesfile = ~/.gitignore-global
+	editor = 'subl' --wait
+	autocrlf = true
+[user]
+	email = me@lpghatguy.com
+[merge]
+	conflictstyle = diff3
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
