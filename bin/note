@@ -4,8 +4,6 @@
 
 set -e
 
-source ~/.profile
-
 NOW=`date +%Y-%m-%d`
 
 proj
