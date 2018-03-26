@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Snags -- the things that make me want to stop working on a project
+
+NOW=`date +%Y-%m-%d`
+
+cd /c/projects/snags
+
+touch entries/$NOW.md
+subl --wait entries/$NOW.md
+
+git add entries/$NOW.md
+git commit -m "Update snag $NOW"
+git push
