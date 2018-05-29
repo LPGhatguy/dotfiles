@@ -18,6 +18,29 @@ function _proj_complete() {
 }
 complete -F _proj_complete proj
 
+function _prompt {
+	local EXITSTATUS="$?"
+	local OFF="\[\033[m\]"
+
+	local GREEN="\[\033[32m\]"
+	local YELLOW="\[\033[33m\]"
+	local RED="\[\033[31m\]"
+	local BLUE="\[\033[36m\]"
+
+	local PROMPT="\n${GREEN}\u ${YELLOW}\w${OFF}${BLUE}`__git_ps1`${OFF}\n"
+
+	if [ "${EXITSTATUS}" -eq 0 ]
+	then
+		PS1="${PROMPT}\$ "
+	else
+		PS1="${PROMPT}${RED}\$${OFF} "
+	fi
+
+	PS2="${BOLD}>${OFF} "
+}
+
+PROMPT_COMMAND=_prompt
+
 # On Windows, make sure we're using the UTF-8 codepage
 /c/Windows/System32/chcp.com 65001
 clear
