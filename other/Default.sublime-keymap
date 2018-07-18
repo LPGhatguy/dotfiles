@@ -25,5 +25,7 @@
 	{ "keys": ["ctrl+alt+6"], "command": "focus_group", "args": { "group": 5 } },
 	{ "keys": ["ctrl+alt+7"], "command": "focus_group", "args": { "group": 6 } },
 	{ "keys": ["ctrl+alt+8"], "command": "focus_group", "args": { "group": 7 } },
-	{ "keys": ["ctrl+alt+9"], "command": "focus_group", "args": { "group": 8 } }
+	{ "keys": ["ctrl+alt+9"], "command": "focus_group", "args": { "group": 8 } },
+
+	{ "keys": ["ctrl+0"], "command": "reset_font_size_to_user_defaults" }
 ]
