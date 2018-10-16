@@ -6,6 +6,7 @@
 	"color_scheme": "Packages/User/SublimeLinter/Postap (SL).tmTheme",
 	"default_font_size": 14,
 	"drag_text": false,
+	"draw_white_space": "all",
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -39,7 +40,7 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
