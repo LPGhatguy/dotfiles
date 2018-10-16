@@ -7,6 +7,11 @@
 
 	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
 
+	{ "keys": ["ctrl+shift+up"], "command": "noop" },
+	{ "keys": ["ctrl+shift+down"], "command": "noop" },
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+
 	{ "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
 	{ "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
 	{ "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
