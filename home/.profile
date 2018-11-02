@@ -18,6 +18,11 @@ function _proj_complete() {
 }
 complete -F _proj_complete proj
 
+function brw() {
+	{ error=$(msb 2>&1 1>&$out); } {out}>&1
+	cd $error
+}
+
 function _prompt {
 	local EXITSTATUS="$?"
 	local OFF="\[\033[m\]"
