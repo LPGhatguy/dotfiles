@@ -20,7 +20,7 @@ complete -F _proj_complete proj
 
 function brw() {
 	{ error=$(msb 2>&1 1>&$out); } {out}>&1
-	cd $error
+	cd "$error"
 }
 
 function _prompt {
