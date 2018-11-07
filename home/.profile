@@ -19,8 +19,12 @@ function _proj_complete() {
 complete -F _proj_complete proj
 
 function brw() {
-	{ error=$(msb 2>&1 1>&$out); } {out}>&1
-	cd "$error"
+	{ error=$(msb --pwd 2>&1 1>&$out); } {out}>&1
+
+	if [ "$?" -eq 0 ]
+	then
+		cd "$error"
+	fi
 }
 
 function _prompt {
