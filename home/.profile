@@ -15,7 +15,7 @@ function proj() {
 export -f proj
 
 function _proj_complete() {
-	COMPREPLY=( $(compgen -W "$(ls -1 $PROJ)" "${COMP_WORDS[1]}") )
+	COMPREPLY=( $(compgen -W "$(ls -1 $PROJ | grep /)" "${COMP_WORDS[1]}") )
 	return 0
 }
 complete -F _proj_complete proj
