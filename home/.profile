@@ -6,13 +6,8 @@ complete -d cd
 # Jump to the machine's projects directory ($PROJ) and optionally a project
 # inside it.
 function proj() {
-	cd "$PROJ"
-
-	if [ ! -z "$1" ]; then
-		cd "$1"
-	fi
+	cd "$PROJ/$1"
 }
-export -f proj
 
 function _proj_complete() {
 	COMPREPLY=( $(compgen -W "$(ls -1 $PROJ | grep /)" "${COMP_WORDS[1]}") )
@@ -20,7 +15,7 @@ function _proj_complete() {
 }
 complete -F _proj_complete proj
 
-brw() {
+function brw() {
 	{ error=$(msb --pwd "$@" 2>&1 1>&$out); } {out}>&1
 
 	if [ "$?" -eq 0 ]
@@ -31,6 +26,7 @@ brw() {
 
 function _prompt {
 	local EXITSTATUS="$?"
+
 	local OFF="\[\033[m\]"
 
 	local GREEN="\[\033[32m\]"
@@ -40,13 +36,12 @@ function _prompt {
 
 	local PROMPT="\n${GREEN}\u ${YELLOW}\w${OFF}${BLUE}`__git_ps1`${OFF}\n"
 
-	if [ "${EXITSTATUS}" -eq 0 ]
+	if [ ! "${EXITSTATUS}" -eq 0 ]
 	then
-		PS1="${PROMPT}\$ "
-	else
-		PS1="${PROMPT}${RED}\$${OFF} "
+		printf "\033[31merror: ${EXITSTATUS}\033[m\n"
 	fi
 
+	PS1="${PROMPT}\$ "
 	PS2="${BOLD}>${OFF} "
 }
 
