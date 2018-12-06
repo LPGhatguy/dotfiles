@@ -1,6 +1,8 @@
 # Load machine-specific settings
 source ~/.machine_profile
 
+complete -d cd
+
 # Jump to the machine's projects directory ($PROJ) and optionally a project
 # inside it.
 function proj() {
