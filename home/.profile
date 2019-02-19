@@ -24,7 +24,7 @@ function brw() {
 	fi
 }
 
-function _prompt {
+_prompt() {
 	local EXITSTATUS="$?"
 
 	local OFF="\[\033[m\]"
