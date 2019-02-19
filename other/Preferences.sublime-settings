@@ -2,7 +2,6 @@
 	"atomic_save": false,
 	"auto_complete_commit_on_tab": true,
 	"auto_match_enabled": true,
-	"block_caret": true,
 	"caret_style": "phase",
 	"color_scheme": "Packages/User/SublimeLinter/Postap (SL).tmTheme",
 	"default_font_size": 14,
@@ -38,7 +37,7 @@
 		"node_modules"
 	],
 	"font_face": "Hack",
-	"font_size": 16,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Six",
