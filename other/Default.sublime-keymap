@@ -12,6 +12,9 @@
 	{ "keys": ["alt+k"], "command": "swap_line_up" },
 	{ "keys": ["alt+j"], "command": "swap_line_down" },
 
+	{ "keys": ["ctrl+alt+k"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["ctrl+alt+j"], "command": "select_lines", "args": {"forward": true} },
+
 	{ "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
 	{ "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
 	{ "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
