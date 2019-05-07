@@ -21,7 +21,9 @@ Things to do when setting up a new Windows 10 machine.
 	- Append to `PATH`: `C:\bin`
 - Create `~/.machine_profile`, putting `/c/bin` to the front of `PATH`.
 - Install software
-	- Chrome
+	- Chrome with extensions:
+		- 1Password
+		- cVim (config in `other/cvim`)
 	- Sublime Text and plugins:
 		- NeoVintageous
 		- MarkdownPreview

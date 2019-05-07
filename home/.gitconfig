@@ -3,6 +3,7 @@
 	editor = 'subl' --wait
 	autocrlf = input
 [user]
+	name = "Lucien Greathouse"
 	email = me@lpghatguy.com
 [merge]
 	conflictstyle = diff3

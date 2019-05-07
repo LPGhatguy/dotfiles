@@ -1,0 +1,5 @@
+set smoothscroll
+
+unmap d u
+
+let blacklists = ["*://mail.google.com/*", "*://play.google.com/*", "*://*.slack.com/*", "*://discordapp.com/*", "*://messenger.com/*"]
