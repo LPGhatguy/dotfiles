@@ -43,6 +43,8 @@ Things to do when setting up a new Windows 10 machine.
 			- `cargo install ripgrep`
 		- Bat, cat with syntax highlighting
 			- `cargo install bat`
+		- Magic School Bus, a TUI file browser
+			- `cargo install magic-school-bus`
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Clone dotfiles repo (this one) into `$PROJ/dotfiles`
 - Create configuration symlinks in `cmd.exe` (from home directory):
