@@ -3,31 +3,48 @@ Things to do when setting up a new Windows 10 machine.
 
 ## Baseline
 - Fix Windows settings:
-	1. Enable Developer Mode
-	2. Set key repeat delay to the minimum
-	3. Show hidden files and folder
-	4. Unpin software from the start menu
-	5. Hide recently used and tips from start menu
-	6. Set 'Combine taskbar buttons' to never (Vista-style taskbar)
-	7. Turn off animations (they make me motion sick)
-	8. Turn off "When I snap a window, show what I can snap next to it"
-	9. Turn off "Show suggestions occasionally in your timeline"
-- Install software
-	1. Chrome
-	2. Sublime Text and plugins:
-		- NeoVintageous
-		- MarkdownPreview
-		- SublimeLinter
-	3. Git
-	4. [Hack font](https://sourcefoundry.org/hack/)
-- Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
-- Create `C:\bin`, `C:\lang`, `C:\projects` folders
+	- Enable Developer Mode
+	- Set key repeat delay to the minimum
+	- Show hidden files and folder
+	- Unpin software from the start menu
+	- Hide recently used and tips from start menu
+	- Set 'Combine taskbar buttons' to never (Vista-style taskbar)
+	- Turn off animations (they make me motion sick)
+	- Turn off "When I snap a window, show what I can snap next to it"
+	- Turn off "Show suggestions occasionally in your timeline"
+- Create custom folders:
+	- `C:\projects`, for most user data
+	- `C:\bin`, for random utilities I want on `PATH`
+	- `C:\lang`
 - Add to system path:
 	- Add `PROJ`, pointing to `C:\projects`
 	- Append to `PATH`: `C:\bin`
-- Create `PROJ` system environment variable
-- Clone dotfiles repo (this one) into `projects/dotfiles`
-- Create `~/.machine_profile` defining `$PROJ` variable
+- Create `~/.machine_profile`, putting `/c/bin` to the front of `PATH`.
+- Install software
+	- Chrome
+	- Sublime Text and plugins:
+		- NeoVintageous
+		- MarkdownPreview
+			- This extension needs a [GitHub personal access token](https://github.com/settings/tokens)
+		- SublimeLinter
+	- Git
+		- Generate [GitHub personal access token](https://github.com/settings/tokens) for this machine
+	- [More recent version of less](https://www.guysalias.tk/misc/less/)
+	- [Hack font](https://sourcefoundry.org/hack/)
+	- [7-zip](https://www.7-zip.org/download.html)
+	- [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
+	- [Clang](http://releases.llvm.org/download.html)
+	- [Rust](https://rustup.rs/) and Rust-based software:
+		- Alacritty, better terminal
+			- `cargo install --git https://github.com/jwilm/alacritty.git`
+			- Add Alacritty shortcut to the start menu, it's in `%USERPROFILE%\.cargo\bin`
+			- Make sure to set the "Start in..." option in the shortcut to `%USERPROFILE%`
+		- Ripgrep, better grep
+			- `cargo install ripgrep`
+		- Bat, cat with syntax highlighting
+			- `cargo install bat`
+- Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
+- Clone dotfiles repo (this one) into `$PROJ/dotfiles`
 - Create configuration symlinks in `cmd.exe` (from home directory):
 	- Shell profile: `mklink .profile %PROJ%`
 	- Git config:
@@ -40,9 +57,3 @@ Things to do when setting up a new Windows 10 machine.
 		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-mousemap" "%PROJ%\dotfiles\other\Default.sublime-mousemap"`
 	- Alacritty config
 		- `mklink /d "%APPDATA%\alacritty" "%PROJ%\dotfiles\other\alacritty"`
-- Generate [GitHub personal access token](https://github.com/settings/tokens) for Git
-- Install ["Build Tools for Visual Studio 2019"](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
-- Install [Rust](https://rustup.rs/)
-- Install [Clang](http://releases.llvm.org/download.html)
-- Install Alacritty: `cargo install --git https://github.com/jwilm/alacritty.git`
-- Install Ripgrep: `cargo install ripgrep`
