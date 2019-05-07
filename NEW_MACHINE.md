@@ -1,6 +1,7 @@
 # Setting up a new machine
 Things to do when setting up a new Windows 10 machine.
 
+## Baseline
 - Fix Windows settings:
 	1. Enable Developer Mode
 	2. Set key repeat delay to the minimum
@@ -9,10 +10,16 @@ Things to do when setting up a new Windows 10 machine.
 	5. Hide recently used and tips from start menu
 	6. Set 'Combine taskbar buttons' to never (Vista-style taskbar)
 	7. Turn off animations (they make me motion sick)
+	8. Turn off "When I snap a window, show what I can snap next to it"
+	9. Turn off "Show suggestions occasionally in your timeline"
 - Install software
 	1. Chrome
+	2. Sublime Text and plugins:
+		- NeoVintageous
+		- MarkdownPreview
+		- SublimeLinter
 	3. Git
-	2. Sublime Text
+	4. [Hack font](https://sourcefoundry.org/hack/)
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Create `C:\bin`, `C:\lang`, `C:\projects` folders
 - Add to system path:
@@ -33,4 +40,9 @@ Things to do when setting up a new Windows 10 machine.
 		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-mousemap" "%PROJ%\dotfiles\other\Default.sublime-mousemap"`
 	- Alacritty config
 		- `mklink /d "%APPDATA%\alacritty" "%PROJ%\dotfiles\other\alacritty"`
-- Generate [GitHub personal access token](https://github.com/settings/tokens)
+- Generate [GitHub personal access token](https://github.com/settings/tokens) for Git
+- Install ["Build Tools for Visual Studio 2019"](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
+- Install [Rust](https://rustup.rs/)
+- Install [Clang](http://releases.llvm.org/download.html)
+- Install Alacritty: `cargo install --git https://github.com/jwilm/alacritty.git`
+- Install Ripgrep: `cargo install ripgrep`
