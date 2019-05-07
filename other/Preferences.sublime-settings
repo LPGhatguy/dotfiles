@@ -3,7 +3,6 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_match_enabled": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/Postap (SL).tmTheme",
 	"default_font_size": 14,
 	"drag_text": false,
 	"draw_white_space": "all",
@@ -52,6 +51,7 @@
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"margin": 0,
+	"neovintageous_build_version": 11100,
 	"rulers":
 	[
 		80,
@@ -61,8 +61,9 @@
 	"shift_tab_unindent": true,
 	"show_line_endings": true,
 	"tabs_medium": true,
-	"theme": "postap.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"typescript_auto_format": false,
-	"vintageous_reset_mode_when_switching_tabs": false
+	"vintageous_reset_mode_when_switching_tabs": false,
+	"vintageous_use_ctrl_keys": false,
+	"vintageous_use_super_keys": false
 }
