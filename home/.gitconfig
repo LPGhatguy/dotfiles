@@ -12,3 +12,5 @@
 	s = status
 	a = add
 	d = diff
+[winUpdater]
+	recentlySeenVersion = 2.21.0.windows.1
