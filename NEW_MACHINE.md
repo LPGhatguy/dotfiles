@@ -25,10 +25,18 @@ Things to do when setting up a new Windows 10 machine.
 		- 1Password
 		- cVim (config in `other/cvim`)
 	- Sublime Text and plugins:
-		- NeoVintageous
+		- ColorPicker
+		- EditorConfig
+		- GenerateUUID
+		- Git Commit Message Syntax
 		- MarkdownPreview
 			- This extension needs a [GitHub personal access token](https://github.com/settings/tokens)
+		- NeoVintageous
+		- Pretty JSON
+		- Rust Enhanced
 		- SublimeLinter
+		- TOML
+		- Wrap Plus
 	- Git
 		- Generate [GitHub personal access token](https://github.com/settings/tokens) for this machine
 	- [More recent version of less](https://www.guysalias.tk/misc/less/)
@@ -52,13 +60,13 @@ Things to do when setting up a new Windows 10 machine.
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Clone dotfiles repo (this one) into `$PROJ/dotfiles`
 - Create configuration symlinks in `cmd.exe` (from home directory):
-	- Shell profile: `mklink .profile %PROJ%`
+	- Shell profile: `mklink .profile %PROJ%\dotfiles\home\.profile`
 	- Git config:
 		- `mklink .gitconfig "%PROJ%\dotfiles\home\.gitconfig"`
 		- `mklink .gitignore-global "%PROJ%\dotfiles\home\.gitignore-global"`
 	- Sublime Text config
 		- `mklink C:\bin\subl.exe "C:\Program Files\Sublime Text 3\subl.exe"`
-		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Preferences.sublime-settings" "%PROJ%\dotfiles\Preferences.sublime-settings"`
+		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Preferences.sublime-settings" "%PROJ%\dotfiles\other\Preferences.sublime-settings"`
 		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-keymap" "%PROJ%\dotfiles\other\Default.sublime-keymap"`
 		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-mousemap" "%PROJ%\dotfiles\other\Default.sublime-mousemap"`
 	- Alacritty config

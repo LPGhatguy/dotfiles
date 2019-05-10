@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore-global
-	editor = 'subl' --wait
+	editor = 'subl' --new-window --wait
 	autocrlf = input
 [user]
 	name = "Lucien Greathouse"
