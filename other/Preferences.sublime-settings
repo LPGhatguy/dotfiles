@@ -39,10 +39,10 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
+		"Rust",
 		"Six",
 		"Vintage",
-		"Vintageous",
-		"Rust"
+		"Vintageous"
 	],
 	"indent_guide_options":
 	[
