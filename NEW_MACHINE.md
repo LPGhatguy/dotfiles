@@ -42,6 +42,7 @@ Things to do when setting up a new Windows 10 machine.
 	- [More recent version of less](https://www.guysalias.tk/misc/less/)
 	- [Hack font](https://sourcefoundry.org/hack/)
 	- [7-zip](https://www.7-zip.org/download.html)
+	- [GraphViz](https://www.graphviz.org/download/)
 	- [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
 	- [Clang](http://releases.llvm.org/download.html)
 	- [Rust](https://rustup.rs/) and Rust-based software:
