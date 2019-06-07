@@ -50,6 +50,8 @@ _prompt() {
 
 PROMPT_COMMAND=_prompt
 
+export EDITOR="subl --wait"
+
 # On Windows, make sure we're using the UTF-8 codepage
 /c/Windows/System32/chcp.com 65001
 clear
