@@ -61,6 +61,8 @@ Things to do when setting up a new Windows 10 machine.
 			- `cargo install tokei`
 		- fd, a find replacement
 			- `cargo install fd-find`
+		- watchexec, to run commands in response to file changes
+			- `cargo install watchexec`
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Clone dotfiles repo (this one) into `$PROJ/dotfiles`
 - Create configuration symlinks in `cmd.exe` (from home directory):
