@@ -1,0 +1,16 @@
+{
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "vim.surround": false,
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "editor.fontFamily": "Hack, monospace",
+    "vim.easymotionMarkerFontFamily": "Hack",
+    "editor.acceptSuggestionOnEnter": "off",
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        "**/target/*/**": true
+    },
+    "workbench.tree.indent": 14,
+    "workbench.tree.renderIndentGuides": "always",
+    "editor.renderWhitespace": "boundary"
+}

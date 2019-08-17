@@ -63,6 +63,8 @@ Things to do when setting up a new Windows 10 machine.
 			- `cargo install fd-find`
 		- watchexec, to run commands in response to file changes
 			- `cargo install watchexec`
+		- makelink, a better cross-platform symlink command
+			- `cargo install makelink`
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Clone dotfiles repo (this one) into `$PROJ/dotfiles`
 - Create configuration symlinks in `cmd.exe` (from home directory):
@@ -77,3 +79,7 @@ Things to do when setting up a new Windows 10 machine.
 		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-mousemap" "%PROJ%\dotfiles\other\Default.sublime-mousemap"`
 	- Alacritty config
 		- `mklink /d "%APPDATA%\alacritty" "%PROJ%\dotfiles\other\alacritty"`
+- Create config symlinks in Bash (from any directory):
+	- VS Code config
+		- `makelink $APPDATA/Code/User/settings.json $PROJ/dotfiles/vscode/settings.json`
+		- `makelink $APPDATA/Code/User/keybindings.json $PROJ/dotfiles/vscode/keybindings.json`
