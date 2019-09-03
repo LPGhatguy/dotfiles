@@ -871,5 +871,15 @@
         "key": "ctrl+k ctrl+shift+c",
         "command": "-copyRelativeFilePath",
         "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
     }
 ]

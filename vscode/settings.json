@@ -12,5 +12,7 @@
     },
     "workbench.tree.indent": 14,
     "workbench.tree.renderIndentGuides": "always",
-    "editor.renderWhitespace": "boundary"
+    "editor.renderWhitespace": "boundary",
+    "explorer.confirmDelete": false,
+    "vim.overrideCopy": false
 }
