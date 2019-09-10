@@ -46,6 +46,7 @@ Things to do when setting up a new Windows 10 machine.
 	- [GraphViz](https://www.graphviz.org/download/)
 	- [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
 	- [Clang](http://releases.llvm.org/download.html)
+	- [jq](https://stedolan.github.io/jq/)
 	- [Rust](https://rustup.rs/) and Rust-based software:
 		- Alacritty, better terminal
 			- `cargo install --git https://github.com/jwilm/alacritty.git`
