@@ -14,5 +14,7 @@
     "workbench.tree.renderIndentGuides": "always",
     "editor.renderWhitespace": "boundary",
     "explorer.confirmDelete": false,
-    "vim.overrideCopy": false
+    "vim.overrideCopy": false,
+    "window.zoomLevel": 0,
+    "debug.allowBreakpointsEverywhere": true
 }
