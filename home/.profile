@@ -2,6 +2,9 @@
 # It should specify the variable 'PROJ' at least
 source ~/.machine_profile
 
+# Make tab completion not have the 'exe' suffix
+shopt -s completion_strip_exe
+
 # Jump to the machine's projects directory ($PROJ) and optionally a project
 # inside it.
 function proj() {
