@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Runs Dot with live-reloading for preview in a browser.
+
+set -e
+
+DIR=`cygpath --dos $(mktemp -d)`
+OUT="$DIR/graph.svg"
+
+mkdir -p "$TEMP"
+
+dot "$1" -Tsvg -o "$OUT"
+watchexec -w "$1" "dot $1 -Tsvg -o $OUT" &
+
+live-server "$OUT"
