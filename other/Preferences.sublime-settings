@@ -3,6 +3,7 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_match_enabled": true,
 	"caret_style": "phase",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"default_font_size": 14,
 	"drag_text": false,
 	"draw_white_space": "all",
@@ -64,6 +65,7 @@
 	"tabs_medium": true,
 	"trim_trailing_white_space_on_save": true,
 	"typescript_auto_format": false,
+	"vintageous_enable_sneak": false,
 	"vintageous_reset_mode_when_switching_tabs": false,
 	"vintageous_use_ctrl_keys": false,
 	"vintageous_use_super_keys": false
