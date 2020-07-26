@@ -27,34 +27,36 @@ function brw() {
 	fi
 }
 
-_prompt() {
-	local EXITSTATUS="$?"
+# _prompt() {
+# 	local EXITSTATUS="$?"
 
-	# Show a newline if this isn't the first prompt of the session
-	if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
-		PS1_NEWLINE_LOGIN=true
-	else
-		printf '\n'
-	fi
+# 	# Show a newline if this isn't the first prompt of the session
+# 	if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
+# 		PS1_NEWLINE_LOGIN=true
+# 	else
+# 		printf '\n'
+# 	fi
 
-	local RESET="\033[m"
-	local GREEN="\033[32m"
-	local YELLOW="\033[33m"
-	local RED="\033[31m"
-	local BLUE="\033[36m"
+# 	local RESET="\033[m"
+# 	local GREEN="\033[32m"
+# 	local YELLOW="\033[33m"
+# 	local RED="\033[31m"
+# 	local BLUE="\033[36m"
 
-	if [ ! "${EXITSTATUS}" -eq 0 ]; then
-		printf "${RED}error: ${EXITSTATUS}${RESET}\n"
-	fi
+# 	if [ ! "${EXITSTATUS}" -eq 0 ]; then
+# 		printf "${RED}error: ${EXITSTATUS}${RESET}\n"
+# 	fi
 
-	PS1="${GREEN}\u ${YELLOW}\w${BLUE}$(__git_ps1)${RESET}\n\$ "
-	PS2="${BOLD}>${RESET} "
-}
+# 	PS1="${GREEN}\u ${YELLOW}\w${BLUE}$(__git_ps1)${RESET}\n\$ "
+# 	PS2="${BOLD}>${RESET} "
+# }
 
-PROMPT_COMMAND=_prompt
+# PROMPT_COMMAND=_prompt
 
 export EDITOR="subl --wait"
 
 # On Windows, make sure we're using the UTF-8 codepage
 /c/Windows/System32/chcp.com 65001
 clear
+
+eval "$(starship init bash)"
