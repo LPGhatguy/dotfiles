@@ -12,5 +12,15 @@
 	s = status
 	a = add
 	d = diff
+	root = rev-parse --show-toplevel
 [winUpdater]
 	recentlySeenVersion = 2.21.0.windows.1
+[push]
+	default = upstream
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	verbose = true
