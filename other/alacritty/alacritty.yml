@@ -47,15 +47,15 @@ scrolling:
 
 font:
   normal:
-    family: Hack NF
+    family: Hack
     style: Regular
 
   bold:
-    family: Hack NF
+    family: Hack
     style: Bold
 
   italic:
-    family: Hack NF
+    family: Hack
     style: Italic
 
   # Point size
