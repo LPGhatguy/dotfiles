@@ -27,6 +27,13 @@ function brw() {
 	fi
 }
 
+# Bind Magic School Bus to ctrl+f, preserving current line and updating prompt
+# using the trick from here: https://stackoverflow.com/q/40417695/802794
+bind -x '"\200": TEMP_LINE=$READLINE_LINE; TEMP_POINT=$READLINE_POINT'
+bind -x '"\201": READLINE_LINE=$TEMP_LINE; READLINE_POINT=$TEMP_POINT; unset TEMP_POINT; unset TEMP_LINE'
+bind -x '"\206": "brw"'
+bind '"\C-f":"\200\C-a\C-k\206\C-m\201"'
+
 _prompt() {
 	local EXITSTATUS="$?"
 
@@ -54,6 +61,14 @@ _prompt() {
 PROMPT_COMMAND=_prompt
 
 export EDITOR="subl --wait"
+
+# Configuration for fzf (https://github.com/junegunn/fzf)
+export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type d"
+
+source fzf-completion.bash
+source fzf-key-bindings.bash
 
 # On Windows, make sure we're using the UTF-8 codepage
 /c/Windows/System32/chcp.com 65001
