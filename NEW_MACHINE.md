@@ -68,6 +68,8 @@ Things to do when setting up a new Windows 10 machine.
 			- `cargo install makelink`
 		- sd, a sed replacement(ish)
 			- `cargo install sd`
+		- computergeneration, a compgen replacement
+			- `cargo install computergeneration`
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Clone dotfiles repo (this one) into `$PROJ/dotfiles`
 - Create configuration symlinks in `cmd.exe` (from home directory):

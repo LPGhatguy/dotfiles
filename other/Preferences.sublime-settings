@@ -1,12 +1,19 @@
 {
+	"added_words":
+	[
+		"codebase",
+		"config",
+		"Lua",
+		"uninstalling"
+	],
 	"atomic_save": false,
 	"auto_complete_commit_on_tab": true,
 	"auto_match_enabled": true,
 	"caret_style": "phase",
 	"color_scheme": "Monokai.sublime-color-scheme",
-	"default_font_size": 14,
+	"default_font_size": 16,
 	"drag_text": false,
-	"draw_white_space": "all",
+	"draw_white_space": "selection",
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -42,6 +49,7 @@
 	[
 		"Rust",
 		"Six",
+		"SublimeLinter-luacheck",
 		"Vintage",
 		"Vintageous"
 	],

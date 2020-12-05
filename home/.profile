@@ -5,6 +5,12 @@ source ~/.machine_profile
 # Make tab completion not have the 'exe' suffix
 shopt -s completion_strip_exe
 
+# Start a new terminal in the same place as this one.
+# Will this name collide with stuff? idk probably
+function fork() {
+	start alacritty
+}
+
 # Jump to the machine's projects directory ($PROJ) and optionally a project
 # inside it.
 function proj() {
@@ -12,7 +18,7 @@ function proj() {
 }
 
 function _proj_complete() {
-	COMPREPLY=( $(compgen -W "$(ls -1 $PROJ | grep /)" "${COMP_WORDS[1]}") )
+	COMPREPLY=( $(\ls -1 $PROJ | computergeneration -i "${COMP_WORDS[1]}") )
 	return 0
 }
 complete -F _proj_complete proj
@@ -29,10 +35,12 @@ function brw() {
 
 # Bind Magic School Bus to ctrl+f, preserving current line and updating prompt
 # using the trick from here: https://stackoverflow.com/q/40417695/802794
-bind -x '"\200": TEMP_LINE=$READLINE_LINE; TEMP_POINT=$READLINE_POINT'
-bind -x '"\201": READLINE_LINE=$TEMP_LINE; READLINE_POINT=$TEMP_POINT; unset TEMP_POINT; unset TEMP_LINE'
-bind -x '"\206": "brw"'
-bind '"\C-f":"\200\C-a\C-k\206\C-m\201"'
+bind -x '"\300": TEMP_LINE=$READLINE_LINE; TEMP_POINT=$READLINE_POINT'
+bind -x '"\301": READLINE_LINE=$TEMP_LINE; READLINE_POINT=$TEMP_POINT; unset TEMP_POINT; unset TEMP_LINE'
+
+bind '"\C-f": "\300\C-a\C-k brw \C-m\301"'
+bind '"\C-n": "\300\C-a\C-k start alacritty \C-m\301"'
+bind '"\C-W": "\300\C-a\C-k exit \C-m\301"'
 
 _prompt() {
 	local EXITSTATUS="$?"
@@ -67,8 +75,12 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="fd"
 export FZF_ALT_C_COMMAND="fd --type d"
 
-source fzf-completion.bash
-source fzf-key-bindings.bash
+source ~/fzf-completion.bash
+source ~/fzf-key-bindings.bash
+
+# Use fzf for all tab completion: https://github.com/lincheney/fzf-tab-completion
+source ~/fzf-bash-completion.bash
+bind -x '"\t": fzf_bash_completion'
 
 # On Windows, make sure we're using the UTF-8 codepage
 /c/Windows/System32/chcp.com 65001
