@@ -78,10 +78,6 @@ export FZF_ALT_C_COMMAND="fd --type d"
 source ~/fzf-completion.bash
 source ~/fzf-key-bindings.bash
 
-# Use fzf for all tab completion: https://github.com/lincheney/fzf-tab-completion
-source ~/fzf-bash-completion.bash
-bind -x '"\t": fzf_bash_completion'
-
 # On Windows, make sure we're using the UTF-8 codepage
 /c/Windows/System32/chcp.com 65001
 clear
