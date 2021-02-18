@@ -36,6 +36,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; Inform Projectile where projects are
+(setq projectile-project-search-path '("~/projects"))
+
 ;; Unmap the normal Vim undo keybind and change it to U
 (map! :n "C-r" nil)
 (map! :n "U" #'evil-redo)
@@ -57,6 +60,9 @@
 
 ;; Use rust-analyzer instead of racer as Rust LSP
 (setq lsp-rust-server 'rust-analyzer)
+
+;; Turn on 80 column ruler in programming languages
+(add-hook 'prog-mode-hook (lambda () (display-fill-column-indicator-mode 1)))
 
 ;; Attempt to make Lua indentation make sense
 (setq-default lua-indent-level 4)
