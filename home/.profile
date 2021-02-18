@@ -18,7 +18,7 @@ function proj() {
 }
 
 function _proj_complete() {
-	COMPREPLY=( $(\ls -1 $PROJ | computergeneration -i "${COMP_WORDS[1]}") )
+	COMPREPLY=( $(\ls -1 $PROJ | computergeneration "${COMP_WORDS[1]}") )
 	return 0
 }
 complete -F _proj_complete proj
