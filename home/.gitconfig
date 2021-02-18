@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore-global
-	editor = 'subl' --new-window --wait
+	editor = vim
 	autocrlf = input
 	pager = less --LONG-PROMPT --tabs=3 --quit-if-one-screen --tilde --jump-target=3 --ignore-case --status-column
 [user]
