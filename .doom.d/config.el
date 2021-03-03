@@ -46,6 +46,18 @@
 ;; Unmap C-r ("search backward")
 (map! "C-r" nil)
 
+;; Kill existing M-j and M-k bindings so I can use them
+(map! :after outline
+      :map outline-mode-map
+      :n "M-k" nil
+      :n "M-j" nil)
+(map! "M-j" nil)
+(map! :map global-map "M-k" nil)
+
+;; Drag stuff up and down
+(map! :niv "M-k" #'drag-stuff-up)
+(map! :niv "M-j" #'drag-stuff-down)
+
 ;; Horizontal window split to complement <leader> w s
 (map! :leader "w S" #'split-window-horizontally)
 

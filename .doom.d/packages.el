@@ -6,6 +6,8 @@
 ;; use 'M-x doom/reload'.
 
 (package! glsl-mode)
+(package! mermaid-mode)
+(package! drag-stuff)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
