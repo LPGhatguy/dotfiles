@@ -68,7 +68,7 @@ _prompt() {
 
 PROMPT_COMMAND=_prompt
 
-export EDITOR="subl --wait"
+export EDITOR="edit"
 
 # Configuration for fzf (https://github.com/junegunn/fzf)
 export FZF_DEFAULT_COMMAND="fd --type f"

@@ -76,6 +76,15 @@
 ;; Turn on 80 column ruler in programming languages
 (add-hook 'prog-mode-hook (lambda () (display-fill-column-indicator-mode 1)))
 
+;; Trim trailing whitespace on save in Lua
+(add-hook 'lua-mode-hook
+  (lambda ()
+    (add-hook 'write-contents-functions
+      (lambda ()
+        (save-excursion
+          (delete-trailing-whitespace)))
+      nil t)))
+
 ;; Attempt to make Lua indentation make sense
 (setq-default lua-indent-level 4)
 (add-hook 'lua-mode-hook
