@@ -3,47 +3,28 @@ Things to do when setting up a new Windows 10 machine.
 
 ## Baseline
 - Fix Windows settings:
+	- Unpin software from the start menu
+	- Set 'Combine taskbar buttons' to never (Vista-style taskbar)
 	- Enable Developer Mode
 	- Set key repeat delay to the minimum
-	- Show hidden files and folder
-	- Unpin software from the start menu
 	- Hide recently used and tips from start menu
-	- Set 'Combine taskbar buttons' to never (Vista-style taskbar)
 	- Turn off animations (they make me motion sick)
 	- Turn off "When I snap a window, show what I can snap next to it"
-	- Turn off "Show suggestions occasionally in your timeline"
+	- Turn off "Show suggestions in your timeline"
 - Create custom folders:
-	- `C:\projects`, for most user data
+	- `~/projects`, for most user data
 	- `C:\bin`, for random utilities I want on `PATH`
-	- `C:\lang`
 - Add to system path:
-	- Add `PROJ`, pointing to `C:\projects`
+	- Add `PROJ`, pointing to `/c/Users//projects`
 	- Append to `PATH`: `C:\bin`
 - Create `~/.machine_profile`, putting `/c/bin` to the front of `PATH`.
 - Install software
-	- Chrome with extensions:
-		- 1Password
-		- cVim (config in `other/cvim`)
-	- Sublime Text and plugins:
-		- ColorPicker
-		- EditorConfig
-		- GenerateUUID
-		- Git Commit Message Syntax
-		- MarkdownPreview
-			- This extension needs a [GitHub personal access token](https://github.com/settings/tokens)
-		- NeoVintageous
-		- Pretty JSON
-		- Rust Enhanced
-		- SublimeLinter
-		- TOML
-		- Wrap Plus
+	- Chrome
 	- Git
 		- Generate [GitHub personal access token](https://github.com/settings/tokens) for this machine
 	- [7-Zip](https://www.7-zip.org/download.html)
 	- [WinCompose](https://github.com/samhocevar/wincompose)
-	- [More recent version of less](https://www.guysalias.tk/misc/less/)
 	- [Hack font](https://sourcefoundry.org/hack/)
-	- [GraphViz](https://www.graphviz.org/download/)
 	- [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
 	- [Clang](http://releases.llvm.org/download.html)
 	- [jq](https://stedolan.github.io/jq/)
@@ -72,19 +53,10 @@ Things to do when setting up a new Windows 10 machine.
 			- `cargo install computergeneration`
 - Run [uncap](https://github.com/susam/uncap) to remap `Caps Lock` to `Escape`
 - Clone dotfiles repo (this one) into `$PROJ/dotfiles`
-- Create configuration symlinks in `cmd.exe` (from home directory):
-	- Shell profile: `mklink .profile %PROJ%\dotfiles\home\.profile`
+- Create configuration symlinks in Bash:
+	- Shell profile: `makelink $PROJ/dotfiles/home/.profile ~/.profile`
 	- Git config:
-		- `mklink .gitconfig "%PROJ%\dotfiles\home\.gitconfig"`
-		- `mklink .gitignore-global "%PROJ%\dotfiles\home\.gitignore-global"`
-	- Sublime Text config
-		- `mklink C:\bin\subl.exe "C:\Program Files\Sublime Text 3\subl.exe"`
-		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Preferences.sublime-settings" "%PROJ%\dotfiles\other\Preferences.sublime-settings"`
-		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-keymap" "%PROJ%\dotfiles\other\Default.sublime-keymap"`
-		- `mklink "%APPDATA%\Sublime Text 3\Packages\User\Default (Windows).sublime-mousemap" "%PROJ%\dotfiles\other\Default.sublime-mousemap"`
+		- `makelink "$PROJ/dotfiles/home/.gitconfig" ~/.gitconfig`
+		- `makelink "$PROJ/dotfiles/home/.gitignore-global" ~/.gitignore-global`
 	- Alacritty config
-		- `mklink /d "%APPDATA%\alacritty" "%PROJ%\dotfiles\other\alacritty"`
-- Create config symlinks in Bash (from any directory):
-	- VS Code config
-		- `makelink $APPDATA/Code/User/settings.json $PROJ/dotfiles/vscode/settings.json`
-		- `makelink $APPDATA/Code/User/keybindings.json $PROJ/dotfiles/vscode/keybindings.json`
+		- `makelink "$PROJ/dotfiles/other/alacritty" "$APPDATA/alacritty"`
